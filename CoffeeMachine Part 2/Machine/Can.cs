@@ -25,6 +25,11 @@ namespace CoffeeMachine_Part_2
             Brewage = brewage;
         }
 
+
+        /// <summary>
+        /// Emptys can
+        /// </summary>
+        /// <returns></returns>
         public string Empty()
         {
             Brewage = Brewage.ThinAir;

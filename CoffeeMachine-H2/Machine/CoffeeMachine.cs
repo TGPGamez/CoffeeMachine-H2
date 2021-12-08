@@ -11,14 +11,35 @@ namespace CoffeeMachine_H2
         public FilterHolder FilterHolder { get; private set; } = new FilterHolder();
         public int WaterMlAmount { get; private set; } = 0;
 
+        /// <summary>
+        /// Inserts a filter to filterholder
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         public string InsertFilter(Filter filter) => FilterHolder.InsertFilter(filter);
+        
+        /// <summary>
+        /// Removes filter from filterholder
+        /// </summary>
+        /// <returns></returns>
         public string RemoveFilter() => FilterHolder.RemoveFilter();
+        
+        /// <summary>
+        /// Fills coffeemachine with water
+        /// </summary>
+        /// <param name="mlAmount"></param>
+        /// <returns></returns>
         public string FillWithWater(int mlAmount)
         {
             WaterMlAmount += mlAmount;
             return $"Added {mlAmount}ml Water to the machine";
         }
 
+        /// <summary>
+        /// Brews ingredients in machine
+        /// </summary>
+        /// <param name="can"></param>
+        /// <returns></returns>
         public string Brew(ref Can can)
         {
             if ((!FilterHolder.HasCleanFilterWithIngredient()) || (WaterMlAmount <= 0))

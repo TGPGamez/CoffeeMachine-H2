@@ -16,10 +16,15 @@ namespace CoffeeMachine_H2
         public Brewage(int mlAmount, int ingredientAmount, string name)
         {
             MlAmount = mlAmount;
+            //Calculate concentration
             Concentration = (mlAmount / 100.0) * ingredientAmount;
             Name = name;
         }
 
+        /// <summary>
+        /// Checks if brewage is Thin air
+        /// </summary>
+        /// <returns></returns>
         public bool CheckIsThinAir()
         {
             if (Name == "Thin air")
@@ -29,6 +34,10 @@ namespace CoffeeMachine_H2
             return false;
         }
 
+        /// <summary>
+        /// Returns information of brewage
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Brewage consists of {MlAmount}ml {Name} with a concentration of {Concentration}%";

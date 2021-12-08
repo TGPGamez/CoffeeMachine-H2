@@ -19,6 +19,11 @@ namespace CoffeeMachine_H2
             IngredientAmount = ingredientAmount;
         }
 
+        /// <summary>
+        /// Pour water in brewage
+        /// </summary>
+        /// <param name="mlAmount"></param>
+        /// <returns></returns>
         public Brewage PourWater(int mlAmount)
         {
             IsSoaked = true;
