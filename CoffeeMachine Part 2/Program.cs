@@ -12,6 +12,7 @@ namespace CoffeeMachine_Part_2
             
             Console.WriteLine();
             //Insert Coffee filter into machine
+            Console.WriteLine("COFFEE IN CAN");
             Console.WriteLine(coffeMachine.InsertFilter(new Filter("Coffee", 20)));
             //Fill machine with water
             Console.WriteLine(coffeMachine.FillWithWater(100));
@@ -29,6 +30,7 @@ namespace CoffeeMachine_Part_2
             //Remove Coffee filter from machine
             Console.WriteLine(coffeMachine.RemoveFilter());
             //Insert Tea filter into machine
+            Console.WriteLine("TEA IN CUP");
             Console.WriteLine(coffeMachine.InsertFilter(new Filter("Tea", 35)));
             //Fill machine with water
             Console.WriteLine(coffeMachine.FillWithWater(200));

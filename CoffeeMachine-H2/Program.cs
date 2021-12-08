@@ -11,6 +11,7 @@ namespace CoffeeMachine_H2
             Console.WriteLine(coffeMachine.TurnOn());
             Console.WriteLine();
             //Insert new filter into machine
+            Console.WriteLine("COFFEE IN CUP");
             Console.WriteLine(coffeMachine.InsertFilter(new Filter("Coffee", 10)));
             //Fill machine with water
             Console.WriteLine(coffeMachine.FillWithWater(100));
